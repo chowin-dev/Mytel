@@ -1,0 +1,76 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ <div class="header" style="display : flex; flex-direction : row;">
+   <h2 >Mytel Helper</h2>
+   <div class="ng">
+     <button id="toggleMode">Night Mode</button>
+    </div>
+ </div>
+<div class="log_holder">
+<div class="log" id="log">
+<input id="phin" type="number" placeholder="Enter with 96"></input>
+<button style="color : #4CAF50; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" id="login">Login</button>
+<!--otp-->
+<div id="dialog-overlay"></div>
+    <div id="dialog">
+        <p>Enter your OTP:</p>
+        <input type="number" id="otpInput" placeholder="Type here...">
+        <div>
+            <button id="submitButton">Submit</button>
+            <button id="closeButton">Close</button>
+        </div>
+    </div>
+<!--otp-->
+</div>
+</div>
+<div class="search">
+<input class="sein" id="sein" placeholder="Search Phone"/>
+</div>
+<div class="body">
+
+    <div id="container">
+        <table id="listView">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Phone Number</th>
+                    <th>Points</th>
+                    <th>Balance</th>
+                    <th>Data(MB)</th>
+                    <th>Voice</th>
+                    <th>HL2 Status(For My Quest)</th>
+                    <th style="text-align: left;">Actions</th>
+                    <th>No</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- List items will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+    <!--script src="./otp.js"></script>-->
+    <script src="./login.js"></script>
+    <!--<script src="./se.js"></script>-->
+    <script>
+    
+        const toggleModeButton = document.getElementById('toggleMode');
+        toggleModeButton.addEventListener('click', () => {
+            document.body.classList.toggle('night-mode');
+            toggleModeButton.textContent = 
+                document.body.classList.contains('night-mode') 
+                ? 'Day Mode' 
+                : 'Night Mode';
+                });
+    </script>
+    </div>
+</body>
+</html>
